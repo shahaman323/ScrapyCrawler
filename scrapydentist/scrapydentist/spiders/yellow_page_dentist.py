@@ -21,13 +21,13 @@ class YellowPageDentist(scrapy.Spider):
             clinic=response.xpath('//*[@class="dockable business-name"]/text()').get(),
             videos=response.xpath('//*[@id="yp-video-container"]/@data-videosrc').get(),
             images=response.xpath('//*[@class="media-thumbnail collage-pic"]//@src').get(),
-            phones=response.xpath('//*[@class="phone dockable"]/@href').get(),
+            phone=response.xpath('//*[@class="phone dockable"]/@href').get(),
             location=response.xpath('//span[@class="address"]/text()').get(),
             openingHours=response.xpath('//td[@class="day-hours"]//@datetime').getall(),
             reviewCount=response.xpath('//*[@class="yp-ratings"]/span/text()').get(),
             latestReviewer=response.xpath('//*[@class="author"]/text()').getall()
         )
-        print("item", item)
+        # print("item", item)
         yield item
 
 
