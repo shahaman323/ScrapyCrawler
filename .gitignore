@@ -1,2 +1,4 @@
 venv
 .idea
+yellow
+__pycache__
